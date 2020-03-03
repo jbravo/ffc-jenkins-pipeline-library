@@ -7,6 +7,11 @@ def repoUrl = ''
 def commitSha = ''
 def workspace
 
+void doStuff() {
+  RbacUtils rbacUtils = new RbacUtils()
+  println rbacUtils.createRoleBinding("developer")
+}
+
 def Boolean __hasKeys(Map mapToCheck, List keys) {
     def passes = true;
     for (key in keys) {
